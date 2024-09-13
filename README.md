@@ -49,9 +49,16 @@ https://www.kaggle.com/datasets/unanimad/the-oscar-award
 
 To provide a well-rounded analysis we used data from prominent film review websites. We additionally added data from Oscar Winners to provide insight on what movies are gaining critical acclaim. 
 
-## Conclusion
+## Conclusions
 
-ADD Conclusion with visualizations
+A larger budget does not correlate to a higher return on investment or more academy awards. Therefore, as a new studio we can focus on creating films within a lower budget first. 
+
+Horror and Thriller movies are the genres that provide the greatest return on investment. 
 
 ## Next Steps
 
+Quality Index of Box Office Films.
+
+Which staff should you pick for oscar wins? 
+
+Ideal movie release dates. 
