@@ -17,12 +17,13 @@ We are new at this and don’t know much about creating movies. We were charged 
 
 ## Data Understanding and Analysis
 
-Data sources are listed below adn beneath each, the type of data included.
+Data sources are listed below and beneath each, the type of data included.
 
 https://www.imdb.com/
 - people in industry
 - movies info and productions details
 - audience ratings
+- NOTE: "im.db" file must be unzipped from "im.db.zip" in the "data" folder prior to running script
 
 https://www.boxofficemojo.com/
 - movie info
