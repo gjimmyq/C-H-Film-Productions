@@ -6,59 +6,51 @@ Miles Cumiskey: https://github.com/mcumiskey
 Mike Hanson: https://github.com/gjimmyq
 
 ## Overview
-Presentation Link: https://github.com/gjimmyq/C-H_Film_Productions/blob/main/presentation.pdf
 
-## Project Structure 
-```
-├── Presentations
-│   ├── github.pdf
-│   └── Phase_2_movie_project.pdf
-├── data
-│   ├── ~$movies_oscars_plots.xlsx
-│   ├── bom.movie_gross.csv.gz
-│   ├── im.db.zip
-│   ├── movies_oscars_plots.xlsx
-│   ├── oscar_data.zip
-│   ├── the_oscar_ward.csv
-│   ├── tmdb.movies.scv.gz
-│   └── tn.movie_budgets.csv.gz
-├── .DS_Store
-├── .gitignore
-├── README.md
-└── film_EDA
-```
+C-H Film Productions is a fictitious new film company. In this project, we analyzed movie industry data to develop a strategy for our company. See additional detail in our final presentation.
+
+Presentation Link: https://github.com/gjimmyq/C-H_Film_Productions/blob/main/presentation.pdf
 
 ## Business Understanding
 
-Our clients have decided to create a new movie studio, but they don’t know anything about creating movies. 
-
-We were charged with exploring what types of films are currently doing the best at the box office. 
-
-With that information, we needed to provide actionable insights for the new movie studio to decide what type of films to create.
+We are new at this and don’t know much about creating movies. We were charged with exploring what types of films are currently doing the best at the box office. With that information, we needed to provide actionable insights to decide what type of films to create, how much money we should spend and what types of people we should be collaborating with.
 
 ## Data Understanding and Analysis
+
+Data sources are listed below adn beneath each, the type of data included.
+
 https://www.imdb.com/
+- people in industry
+- movies info and productions details
+- audience ratings
 
 https://www.boxofficemojo.com/
+- movie info
+- studio
+- revenue
 
 https://www.themoviedb.org/
+- movie info
+- genre
+- audience ratings
 
 https://www.the-numbers.com/
+- movie
+- budget and revenue
 
 https://www.kaggle.com/datasets/unanimad/the-oscar-award
-
-To provide a well-rounded analysis we used data from prominent film review websites. We additionally added data from Oscar Winners to provide insight on what movies are gaining critical acclaim. 
+- movie or individual contributor
+- award
+- nominated or won
 
 ## Data Science Steps
-Original data sources were imported into notebook. For IMDB this entailed extraction of various tables from SQL databases into two dataframes: IMDB People and IMDB Movies. All other data soruces (BOM, TMDB, TN and Oscars) were in CSV or TSV format and could be directly read in as dataframes.
+Original data sources were imported into notebook. For IMDB this entailed extraction of various tables from SQL database into two dataframes: IMDB People and IMDB Movies. All other data sources (BOM, TMDB, TN and Oscars) were in CSV or TSV format and could be directly read in as dataframes.
 
-The first steps consisted of creating more exhaustive dataframes. First we joined IMDB Movies with the TMDB. Next we joined BOM and TN. These two sets were then combined with each as Movie DB. Movie DB was merged with our Oscar dataset to create Movies Oscars. The was our primary dataset that was used for multiple subsequent manipulations to address a variety of questions. For instance, it was combined with the IMDB People table to provide a wholistic set of people involved in each movie. Another branch from this critical intermediate dataset was to group by genre to understand how different genres performed in the market.
+The first steps consisted of creating more exhaustive dataframes. First we joined IMDB Movies with the TMDB. Next we joined BOM and TN. These two sets were then combined as Movie DB. Movie DB was merged with our Oscar dataset to create Movies Oscars. The was our primary dataset that was used for multiple subsequent manipulations to address a variety of questions. For instance, it was combined with the IMDB People table to provide a holistic set of people involved in each movie. Another branch from this critical intermediate dataset was to group by genre and people involved to understand how different genres performed in the market and if there were certain people who performd best across multiple movies.
 
-Another step to carry out to gnerate certain plots and regressions was the removal of nulls from intermediate dataframes, which was done as needed.
+In order to gnerate certain plots and regressions, nulls were removed from intermediate dataframes as needed. Lastly, the Statsmodel module in Python was used to regress quantitative variables upon each other to test for correlation. This was done for dataframes that existed at various timepoints over the course of the project.
 
-Lastly, the Statsmodel module in Python was used to regress quantitative variables upon each other to test for correlation. This was done for dataframes that existed at various timepoints over the course of the project.
-
-## Major Visualizations and Associated Commentary
+### Major Visualizations and Associated Commentary
 
 Proposal #1: Initially produce films with lower budgets to mitigate risk associated with inexperience.
 
@@ -109,4 +101,6 @@ Lastly, our dataset is quite comprehensive and can yield additional insights. Ne
 
 <img width="806" alt="image" src="https://github.com/user-attachments/assets/6e6005ef-5769-4e6d-8646-40859009aa8a">
 
+## Conclusions
 
+C-H Film Productions plans to venture into the film industry by initially focusing on horror and thriller films with budgets less than $10MM while partnering with Damien Chazelle.
